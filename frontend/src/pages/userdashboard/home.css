@@ -1,0 +1,145 @@
+/* Full-width container for the entire page */
+.usercontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    padding: 10px 20px; /* Adjust padding */
+    margin-bottom: 20px; /* Space between navbar and the content */
+    display: flex;
+    justify-content: space-between; /* Space between the welcome message and other items */
+    align-items: center; /* Center align items vertically */
+    background-color: #343a40; /* Background color for the navbar */
+    height: 60px; /* Fixed height for the navbar */
+    position: relative; /* Relative positioning */
+  }
+  
+  .welcome-message {
+    color: white;
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: bold; /* Add bold styling */
+    text-transform: uppercase; /* Capitalize the text */
+  }
+  
+  /* Create button styling (outside navbar) */
+  .create-button {
+    background-color: rgb(121, 6, 96);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed; /* Fixed position */
+    right: 20px; /* Position to the right side */
+    bottom: 830px; /* Position from the bottom */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .create-button:hover {
+    background-color: rgb(101, 5, 80);
+  }
+  
+  /* Styling for the create ticket form */
+  .create-ticket-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px; /* Set maximum width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for a decent look */
+    position: fixed; /* Fixed position to overlay on the content */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be centered */
+    z-index: 1000; /* Ensure it’s above other content */
+    display: none; /* Initially hidden */
+  }
+  
+  .create-ticket-form.show {
+    display: block; /* Show form when "show" class is added */
+  }
+  
+  .create-ticket-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .create-ticket-form .form-group label {
+    font-weight: bold;
+  }
+  
+  .create-ticket-form .form-group input,
+  .create-ticket-form .form-group textarea,
+  .create-ticket-form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Close button styling for the form */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    color: #000;
+  }
+  
+  /* Table styling */
+  .table {
+    margin: 20px; /* Add margin around the table */
+    width: calc(100% - 40px); /* Adjust table width to fit within container with margin */
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .table td {
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .table td .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .table td .mx-3 {
+    margin: 0 10px;
+  }
+  
+  /* Icons styling */
+  .react-icons {
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .react-icons:hover {
+    color: #007bff;
+  }
+  
+  /* Toast styling */
+  .Toastify__toast-container {
+    font-family: Arial, sans-serif;
+  }
+  
