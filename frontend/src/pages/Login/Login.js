@@ -48,10 +48,12 @@ function Login({ setIsAuthenticated }) {
         handleSuccess(message);
         sessionStorage.setItem('token', jwtToken);
         sessionStorage.setItem('user', JSON.stringify(user));
-        if(user.role==="admin") {
-          setTimeout(() => {
-            navigate("/admin")
-          }, 1000);
+        console.log(user.role);
+
+        if(user.role=="admin") {
+          
+            navigate('/admin');
+          
         }else if(user.role==="resolver"){
           setTimeout(() => {
             navigate('/resolver');

@@ -4,8 +4,9 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-import AuthRouter from './routes/AuthRouter.js';
-import TicketRouter from './routes/TicketRouter.js';
+import AuthRouter from './Routes/AuthRouter.js';
+import TicketRouter from './Routes/TicketRouter.js';
+import AssignTicketRouter from './Routes/AssignTicketRouter.js';
 
 dotenv.config();
 
@@ -27,3 +28,5 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors());
 app.use('/auth', AuthRouter);
 app.use('/tickets', TicketRouter);
+
+app.use('/tickets', AssignTicketRouter);

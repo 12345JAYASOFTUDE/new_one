@@ -22,19 +22,44 @@ export const createTicket = async (req, res) => {
     }
 };
 
+// export const getTickets = async (req, res) => {
+//     const user = req.query.user;
+//     console.log(req.body)
+//     console.log("I am controllert calling...")
+//     try {
+//         const tickets = await Ticket.find({user}); // Populate user field if needed
+//         console.log( "ticketsticketstickets" ,tickets)
+//         res.status(200).json({ success: true, tickets });
+//     } catch (err) {
+//         console.error('Error fetching tickets:', err); // Log the error details
+//         res.status(500).json({ success: false, message: 'Server error', error: err.message });
+//     }
+// }
+
+
 export const getTickets = async (req, res) => {
-    const user = req.query.user;
-    console.log(req.body)
-    console.log("I am controllert calling...")
-    try {
-        const tickets = await Ticket.find({user}); // Populate user field if needed
-        console.log( "ticketsticketstickets" ,tickets)
-        res.status(200).json({ success: true, tickets });
-    } catch (err) {
-        console.error('Error fetching tickets:', err); // Log the error details
-        res.status(500).json({ success: false, message: 'Server error', error: err.message });
-    }
+  const user = req.query.user;
+  console.log(req.body);
+  console.log("I am controller calling...");
+
+  try {
+      let tickets;
+      if (user) {
+          // Fetch tickets for a specific user
+          tickets = await Ticket.find({ user });
+      } else {
+          // Fetch all tickets if no user is specified (e.g., for admin)
+          tickets = await Ticket.find();
+      }
+
+      console.log("tickets", tickets);
+      res.status(200).json({ success: true, tickets });
+  } catch (err) {
+      console.error('Error fetching tickets:', err); // Log the error details
+      res.status(500).json({ success: false, message: 'Server error', error: err.message });
+  }
 }
+
 
 export const deleteticket = async (req, res) =>{
     const id = req.query.id;
@@ -73,3 +98,4 @@ export const updateTicket = async (req, res) => {
       res.status(500).json({ success: false, message: 'Server error' });
     }
   };
+

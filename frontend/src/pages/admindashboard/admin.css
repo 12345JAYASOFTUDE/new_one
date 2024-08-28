@@ -1,0 +1,206 @@
+/* General Styles for AdminDashboard */
+
+/* Container for the admin dashboard */
+.admincontainer {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .welcome-message {
+    font-size: 18px;
+  }
+  
+  .Button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .Button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Table Styles */
+  .my-5 {
+    margin: 3rem 0;
+  }
+  
+  .mx-5 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Resolver Modal Styles */
+  .resolver-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%; /* Adjust as needed */
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .resolver-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .resolver-table th, .resolver-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .resolver-table th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .resolver-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .resolver-select-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .resolver-select-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Signup Form Modal Styles */
+  .signup-form-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* Hide by default */
+    width: 80%; /* Adjust as needed */
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .signup-form-modal.show {
+    display: block; /* Show when 'show' class is added */
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .close-button:hover {
+    color: #f00;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .custom-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Description Modal Styles */
+  .description-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%; /* Adjust as needed */
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .description-modal p {
+    margin: 0;
+  }
+  

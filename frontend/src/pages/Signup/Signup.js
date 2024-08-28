@@ -9,7 +9,8 @@ function Signup() {
     name: '',
     email: '',
     password: '',
-    role: ' '
+    role: 'user',
+ 
   });
 
   const [errors, setErrors] = useState({});
@@ -135,18 +136,7 @@ function Signup() {
               className='form-control'
             />
           </div>
-          <div className='form-group'>
-            <label htmlFor='Role' className='form-label'>Role</label>
-            <input
-              onChange={handleChange}
-              type='text'
-              name='role'
-              // id='Role'
-              placeholder='Enter your Role'
-              value={signupInfo.role}
-              className='form-control'
-            />
-          </div>
+          
           <button type='submit' className='custom-button'>Signup</button>
           <span className='signup-link'>Already have an account? <Link to="/login">Login</Link></span>
         </form>
